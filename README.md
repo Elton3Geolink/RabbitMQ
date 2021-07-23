@@ -60,3 +60,15 @@ Para realizar a publicação de uma mesma mensagem para mais de uma fila simulta
 Foi adicionado à solution na pasta "Avancado\ExchangeFanout" um novo projeto chamado "RabbitMQ.ProducerExchangeFanout" onde foi feita a implementação desta funcionalidade.
 Se configurado o servidor RabbitMQ seja em docker ou CloudAMQP, basta rodar este projeto isoladamente e verificar o comportamento no AdminUI do RabbitMQ.
 
+
+### Exchange Direct
+Dependento da regra de negócio do sistema pode ser necessário redirecionar mensagem para devidas filas de acordo com o roteamento (routing). Por exemplo:
+ 
+ - Quando uma mensagem se tratar de uma inserção esta deverá ser enviada para as filas de A e B.
+ - Quando a mensagem se tratar de uma atualização ela deverá ser enviada para a fila B somente.
+
+Foi criado um novo projeto chamado **RabbitMQ.ProducerExchangeDirect** que está dentro da pasta **..\Avancado\ExchangeDirect**
+
+Se configurado o servidor RabbitMQ seja em docker ou CloudAMQP, basta rodar este projeto isoladamente e verificar o comportamento no AdminUI do RabbitMQ.
+
+
