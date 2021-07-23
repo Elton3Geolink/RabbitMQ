@@ -18,7 +18,7 @@ namespace RabbitMQ.Producer
 
             string fila = "FILA_TESTE";
 
-            RabbitFila rabbitFila = new RabbitFila(TipoAcessoConexao.CloudAMQP);
+            RabbitFila rabbitFila = new RabbitFila(TipoAcessoConexao.Local);
 
             ConnectionFactory factory = rabbitFila.ObterConexao();
 
