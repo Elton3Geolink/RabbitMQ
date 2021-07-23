@@ -25,5 +25,38 @@ Senha: guest
 Foi criador um servidor CloudAMQP para que testes e implementações em um cenário diferente do primeiro fosse possível.
 
 
-### Projeto avançado
-Pretendo realizar implementações um pouco mais avançadas. Ainda não realizado...
+
+
+### Projetos avançados
+**Multiplos consumidores**
+
+Redimensionamento simples de mensageria
+----------------------------------------
+
+Cenário:
+
+- Produtor enviando mensagens e consumidor não tem capacidade de consumí-las a tempo hábil.
+Sendo assim a fila vai ficando cada vez mais cheia por não haver vazão.
+
+- Solução:
+Criar multiplos consumidores para processarem as mensagens.
+	-Vale lembrar quem não há problema de cada consumidor processar a mesma mensagem visto que 
+	o RabbitMQ utiliza o algorítimo "Round Robbin" entregando somente mensagens distintas entre os consumidores.
+
+
+- Executar projetos:
+	Execute o projeto RabbitMQ.Producer junto com o projeto RabbitMQ.ConsumerMultiplo.
+
+- Simulações
+	- Para simular o Produtor envia uma 5 mensagens por segundo enquanto o consumidor consome 1 mensagem por segundo.
+	Para isto utilizei sleep de 2 segundos na leitura da mensagem do consumidor. Sendo assim, para dar vazão nas mensagens,
+	serão adicionados 6 consumidores para processar a mensagem. Com este dimensionamento a capacidade de processamento será
+	superior à capacidade de emissão de mensagens.
+
+
+## Replicar mensagens para mais de uma fila
+### Exchange Fanout
+Para realizar a publicação de uma mesma mensagem para mais de uma fila simultaneamente a opção indicada na documentação do RabbitMQ é a utilização da Exchange **fanout**.
+Foi adicionado à solution na pasta "Avancado\ExchangeFanout" um novo projeto chamado "RabbitMQ.ProducerExchangeFanout" onde foi feita a implementação desta funcionalidade.
+Se configurado o servidor RabbitMQ seja em docker ou CloudAMQP, basta rodar este projeto isoladamente e verificar o comportamento no AdminUI do RabbitMQ.
+

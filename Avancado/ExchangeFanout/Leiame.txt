@@ -1,0 +1,4 @@
+Exchange Fanout:
+----------------
+
+Trata-se de publicação realizada por um produtor de uma mesma mensagem para mais de uma fila.
