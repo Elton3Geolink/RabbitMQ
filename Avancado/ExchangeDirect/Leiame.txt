@@ -1,4 +1,4 @@
 Exchange Direct
 ---------------
 
-Redirecionar mensagem para devidas filas de acordo com o roteament (routing).
+Redirecionar mensagem para devidas filas de acordo com o roteamento (routing).
