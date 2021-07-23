@@ -58,8 +58,6 @@ namespace RabbitMQ.ProducerExchangeFanout
         {
             Task.Run(() => {
 
-                int count = 0;
-
                 while (true)
                 {
                     try
@@ -69,10 +67,12 @@ namespace RabbitMQ.ProducerExchangeFanout
 
                         for(int i = 0; i < 10; i++)
                         {
-                            string mensagem = $"Mensagem {i}";
+                            string mensagem = $"Msg criada: {i} - from Publisher {publisherName}";
                             byte[] body = Encoding.UTF8.GetBytes(mensagem);
 
                             channel.BasicPublish(exchange: "teste_fanout", routingKey: queue, basicProperties: null, body);
+
+                            Console.WriteLine($"Msg criada: {i} - from Publisher {publisherName}");
                         }
 
                     }
@@ -80,6 +80,8 @@ namespace RabbitMQ.ProducerExchangeFanout
                     {
                         //Log...
                         Console.WriteLine($"Exception:{ex.Message}");
+
+                        manualResetEvent.Set();
                     }
                 }
             });
