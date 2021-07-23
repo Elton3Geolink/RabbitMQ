@@ -23,7 +23,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExchangeFanout", "ExchangeF
 		Avancado\ExchangeFanout\Leiame.txt = Avancado\ExchangeFanout\Leiame.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.ProducerExchangeFanout", "Avancado\ExchangeFanout\RabbitMQ.ProducerExchangeFanout\RabbitMQ.ProducerExchangeFanout.csproj", "{CD5454EF-1C05-4879-8417-479A78B83B7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.ProducerExchangeFanout", "Avancado\ExchangeFanout\RabbitMQ.ProducerExchangeFanout\RabbitMQ.ProducerExchangeFanout.csproj", "{CD5454EF-1C05-4879-8417-479A78B83B7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExchangeDirect", "ExchangeDirect", "{C18A8439-68C2-4C33-9C0E-BB143A059AED}"
+	ProjectSection(SolutionItems) = preProject
+		Avancado\ExchangeDirect\Leiame.txt = Avancado\ExchangeDirect\Leiame.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.ProducerExchangeDirect", "Avancado\ExchangeDirect\RabbitMQ.ProducerExchangeDirect\RabbitMQ.ProducerExchangeDirect.csproj", "{8F13B734-85E9-43BD-B748-B3954669366D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +58,10 @@ Global
 		{CD5454EF-1C05-4879-8417-479A78B83B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD5454EF-1C05-4879-8417-479A78B83B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD5454EF-1C05-4879-8417-479A78B83B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F13B734-85E9-43BD-B748-B3954669366D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F13B734-85E9-43BD-B748-B3954669366D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F13B734-85E9-43BD-B748-B3954669366D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F13B734-85E9-43BD-B748-B3954669366D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +71,8 @@ Global
 		{D6DE2F4D-D53E-4669-BC73-A61A3A48F0F6} = {70ECC3DA-2CD3-4A2F-9A48-9DBEA31AF5F9}
 		{6B8A972F-B180-4505-B2DD-6693CE6FF566} = {0D4C4AF5-4C86-4D37-B21A-7FF754FC8DBB}
 		{CD5454EF-1C05-4879-8417-479A78B83B7E} = {6B8A972F-B180-4505-B2DD-6693CE6FF566}
+		{C18A8439-68C2-4C33-9C0E-BB143A059AED} = {0D4C4AF5-4C86-4D37-B21A-7FF754FC8DBB}
+		{8F13B734-85E9-43BD-B748-B3954669366D} = {C18A8439-68C2-4C33-9C0E-BB143A059AED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25D0E8EF-314E-4944-AD61-A873B2E732EA}
