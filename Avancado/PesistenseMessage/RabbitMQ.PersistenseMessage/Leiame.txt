@@ -1,0 +1,5 @@
+﻿Persistense Message and Query Durable
+--------------------------------------
+
+Trata-se de manter persistencia das mensagens publicadas e também as filas no RabbitMQ para casos onde 
+o servidor caia, ao subir novamente mantenha as filas e suas mensagens.
