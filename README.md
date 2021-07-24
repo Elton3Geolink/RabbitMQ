@@ -72,3 +72,9 @@ Foi criado um novo projeto chamado **RabbitMQ.ProducerExchangeDirect** que está
 Se configurado o servidor RabbitMQ seja em docker ou CloudAMQP, basta rodar este projeto isoladamente e verificar o comportamento no AdminUI do RabbitMQ.
 
 
+### Persistence Message | Queue Durable
+
+Trata-se de manter persistencia das mensagens publicadas e também as filas no RabbitMQ para casos onde 
+o servidor caia, ao subir novamente mantenha as filas e suas mensagens.
+
+Foi criado um novo projeto chamado **RabbitMQ.ProducerExchangeDirect** que está dentro da pasta **..\Avancado\PesistenseMessage**
