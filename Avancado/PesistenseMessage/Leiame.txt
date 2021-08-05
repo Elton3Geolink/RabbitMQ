@@ -1,0 +1,4 @@
+Ao publicar uma mensagem (enviar para a fila do RabbitMQ) é possível receber informações via eventos de que aquela mensagem foi entregue ao servidor do RabbitMQ (nao se trata de confirmação de 
+leitura do consumidor).
+Para isto é necessário configurar o channel criado para que "escute" os eventos de ACK e NACK para que, ao receber tais eventos, tome a atitude definida via regra de negócios.
+
