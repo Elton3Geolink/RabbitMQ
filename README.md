@@ -78,3 +78,14 @@ Trata-se de manter persistencia das mensagens publicadas e também as filas no R
 o servidor caia, ao subir novamente mantenha as filas e suas mensagens.
 
 Foi criado um novo projeto chamado **RabbitMQ.ProducerExchangeDirect** que está dentro da pasta **..\Avancado\PesistenseMessage**
+
+
+
+
+### PublishConfirmation
+
+Ao publicar uma mensagem (enviar para a fila do RabbitMQ) é possível receber informações via eventos de que aquela mensagem foi entregue ao servidor do RabbitMQ (nao se trata de confirmação de 
+leitura do consumidor).
+Para isto é necessário configurar o channel criado para que "escute" os eventos de ACK e NACK para que, ao receber tais eventos, tome a atitude definida via regra de negócios.
+
+Foi criado um novo projeto chamado **RabbitMQ.PublishConfirmation* que está dentro da pasta **..\Avancado\PublishConfirmation**
